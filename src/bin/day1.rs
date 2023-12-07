@@ -13,7 +13,7 @@ fn part_1(lines: &[String]) {
         total + digits.first().unwrap() * 10 + digits.last().unwrap()
     });
 
-    println!("week 1, part 1: {}", total)
+    println!("day 1, part 1: {}", total)
 }
 
 fn try_parse(word: &str) -> Vec<u32> {
@@ -61,7 +61,7 @@ fn part_2(lines: &[String]) {
         total += collected_digits.first().unwrap() * 10 + collected_digits.last().unwrap();
     }
 
-    println!("week 1, part 2: {}", total)
+    println!("day 1, part 2: {}", total)
 }
 
 fn main() {

@@ -118,8 +118,8 @@ fn calculate(seeds: &Vec<i64>, almanac: &mut ElfAlmanac) {
             let light = almanac.water_to_light.get_mapping(&water);
             let temperature = almanac.light_to_temperature.get_mapping(&light);
             let humidity = almanac.temperature_to_humidity.get_mapping(&temperature);
-            let loc = almanac.humidity_to_location.get_mapping(&humidity);
-            loc
+            
+            almanac.humidity_to_location.get_mapping(&humidity)
         })
         .min()
         .unwrap();
