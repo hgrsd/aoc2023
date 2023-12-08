@@ -108,7 +108,7 @@ fn seeds_2(line: &str) -> Vec<i64> {
     v
 }
 
-fn calculate(seeds: &Vec<i64>, almanac: &mut ElfAlmanac) {
+fn calculate(seeds: &[i64], almanac: &mut ElfAlmanac) {
     let min = seeds
         .iter()
         .map(|seed| {

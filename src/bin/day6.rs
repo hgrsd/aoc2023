@@ -56,7 +56,7 @@ fn parse_2(input: &[String]) -> Vec<Race> {
     vec![Race { duration, distance }]
 }
 
-fn do_the_thing(races: &Vec<Race>) {
+fn do_the_thing(races: &[Race]) {
     let n_options = races.iter().fold(1, |acc, cur| {
         acc * (0..cur.duration)
             .filter(|milliseconds| (milliseconds * (cur.duration - milliseconds)) > cur.distance)

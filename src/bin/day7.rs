@@ -227,7 +227,7 @@ fn part_1(input: &[String]) {
     let rounds = parse(input, false);
     let mut sorted: Vec<&Round> = rounds.iter().collect();
     sorted.sort();
-    let total = sorted
+    let _total = sorted
         .iter()
         .enumerate()
         .fold(0, |acc, (rank, round)| acc + (rank + 1) as i64 * round.bid);
@@ -247,6 +247,6 @@ fn part_2(input: &[String]) {
 
 fn main() {
     let input = read_lines("inputs/day7");
-    // part_1(&input);
+    part_1(&input);
     part_2(&input);
 }
